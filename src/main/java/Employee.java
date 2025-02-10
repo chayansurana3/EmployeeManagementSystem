@@ -1,7 +1,7 @@
 import java.time.LocalDate;
 
 public class Employee {
-    private int empId;
+    private int employeeId;
     protected String name;
     private String department;
     private double salary;
@@ -9,24 +9,24 @@ public class Employee {
     private EmployeeType employeeType;
 
     public Employee(){
-        this(0, "Unknown", "Unknown", 0.0, LocalDate.now(), "FULL_TIME");
+        this(0, "Unknown", "Unknown", 0.0, LocalDate.now(), EmployeeType.FULL_TIME);
     }
 
-    public Employee(int id, String name, String dept, double sal, LocalDate hireDate, String employeeType) {
-        this.empId = id;
+    public Employee(int id, String name, String dept, double sal, LocalDate hireDate, EmployeeType employeeType) {
+        this.employeeId = id;
         this.name = name;
         this.department = dept;
         this.salary = sal;
         this.hireDate = hireDate;
-        this.employeeType = EmployeeType.valueOf(employeeType);
+        this.employeeType = employeeType;
     }
 
     public Employee(int id, String name, String dept){
-        this(id, name, dept, 0.0, LocalDate.now(), "FULL_TIME");
+        this(id, name, dept, 0.0, LocalDate.now(), EmployeeType.FULL_TIME);
     }
 
     public int getEmpId() {
-        return empId;
+        return employeeId;
     }
 
     public String getName() {
@@ -50,7 +50,7 @@ public class Employee {
     }
 
     public void setEmpId(int id) {
-        this.empId = id;
+        this.employeeId = id;
     }
 
     public void setName(String name) {

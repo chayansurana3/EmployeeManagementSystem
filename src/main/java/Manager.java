@@ -4,7 +4,7 @@ public class Manager extends Employee {
     private int teamSize;
 
     public Manager(int empId, String name, String department, double salary, LocalDate hireDate, int teamSize) {
-        super(empId, name, department, salary, hireDate, "FULL_TIME");
+        super(empId, name, department, salary, hireDate, EmployeeType.FULL_TIME);
         this.teamSize = teamSize;
     }
 

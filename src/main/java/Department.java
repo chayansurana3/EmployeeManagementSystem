@@ -19,6 +19,10 @@ public class Department{
         return departmentName;
     }
 
+    public int getDepartmentId() {
+        return departmentId;
+    }
+
     public static int getTotalEmployees(){
         return totalEmployees;
     }
