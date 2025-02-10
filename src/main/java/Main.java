@@ -8,7 +8,7 @@ public class Main {
     }
 
     public static void main(String[] args) {
-        Employee emp1 = new Employee(1, "Chayan Surana", "IT", 100000, LocalDate.of(2021, 1, 1));
+        Employee emp1 = new Employee(1, "Chayan Surana", "IT", 100000, LocalDate.of(2021, 1, 1), "FULL_TIME");
         Manager m1 = new Manager(2, "John Doe", "HR", 5);
         Department d1 = new Department("IT", 1);
         Department d2 = new Department("Finance", 2);
@@ -27,6 +27,6 @@ public class Main {
         System.out.println("Hire Date: " + m1.getHireDate());
         System.out.println("Team Size: " + m1.getTeamSize());
         System.out.println();
-        System.out.println("Total Employees: " + Department.totalEmployees);
+        System.out.println("Total Employees: " + d1.totalEmployees + d2.totalEmployees + d3.totalEmployees);
     }
 }

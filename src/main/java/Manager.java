@@ -4,7 +4,7 @@ public class Manager extends Employee {
     private int teamSize;
 
     public Manager(int empId, String name, String department, double salary, LocalDate hireDate, int teamSize) {
-        super(empId, name, department, salary, hireDate);
+        super(empId, name, department, salary, hireDate, "FULL_TIME");
         this.teamSize = teamSize;
     }
 
@@ -28,6 +28,6 @@ public class Manager extends Employee {
 
     @Override
     public String toString() {
-        return "Employee ID: " + getEmpId() + "\nManager Name: " + getName() + "\nDepartment: " + getDepartment() + "\nSalary: " + getSalary() + "\nHire Date: " + getHireDate() + "\nTeam Size: " + teamSize;
+        return super.toString() + "Manager{" + "teamSize=" + teamSize + '}';
     }
 }

@@ -9,20 +9,20 @@ public class Employee {
     private EmployeeType employeeType;
 
     public Employee(){
-        this(0, "Unknown", "Unknown", 0.0, LocalDate.now());
+        this(0, "Unknown", "Unknown", 0.0, LocalDate.now(), "FULL_TIME");
     }
 
-    public Employee(int id, String name, String dept, double sal, LocalDate hireDate) {
+    public Employee(int id, String name, String dept, double sal, LocalDate hireDate, String employeeType) {
         this.empId = id;
         this.name = name;
         this.department = dept;
         this.Salary = sal;
         this.hireDate = hireDate;
-        Department.totalEmployees++;
+        this.employeeType = EmployeeType.valueOf(employeeType);
     }
 
     public Employee(int id, String name, String dept){
-        this(id, name, dept, 0.0, LocalDate.now());
+        this(id, name, dept, 0.0, LocalDate.now(), "FULL_TIME");
     }
 
     public int getEmpId() {
@@ -45,6 +45,10 @@ public class Employee {
         return hireDate;
     }
 
+    public EmployeeType getEmployeeType() {
+        return employeeType;
+    }
+
     public void setEmpId(int id) {
         this.empId = id;
     }
@@ -65,8 +69,12 @@ public class Employee {
         this.hireDate = hireDate;
     }
 
-    public String toString(Employee e){
-        return "Employee ID: " + e.getEmpId() + "\nEmployee Name: " + e.getName() + "\nDepartment: " + e.getDepartment() + "\nSalary: " + e.getSalary() + "\nHire Date: " + e.getHireDate();
+    public void setEmployeeType(EmployeeType employeeType) {
+        this.employeeType = employeeType;
+    }
+
+    public String toString(){
+        return "Employee ID: " + this.getEmpId() + "\nEmployee Name: " + this.getName() + "\nDepartment: " + this.getDepartment() + "\nSalary: " + this.getSalary() + "\nHire Date: " + this.getHireDate() + "\nEmployee Type: " + this.employeeType;
     }
 
 }
