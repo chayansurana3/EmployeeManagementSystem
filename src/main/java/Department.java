@@ -1,7 +1,9 @@
+import static java.time.LocalDate.*;
+
 public class Department{
     private String departmentName;
     private static int departmentId;
-    public int totalEmployees;
+    private static int totalEmployees;
 
     public Department(String departmentName, int departmentId){
         this.departmentName = departmentName;
@@ -17,17 +19,11 @@ public class Department{
         return departmentName;
     }
 
-    public int getTotalEmployees() {
+    public static int getTotalEmployees(){
         return totalEmployees;
     }
 
     public void setDepartmentName(String departmentName){
         this.departmentName = departmentName;
     }
-
-    public void setTotalEmployees(int totalEmployees){
-        this.totalEmployees = totalEmployees;
-    }
-
-
 }

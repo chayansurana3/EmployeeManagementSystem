@@ -1,10 +1,10 @@
 import java.time.LocalDate;
 
 public class Main {
-    public void promoteEmployee(Employee employee){
+    public void promoteEmployee(Employee employee, int hikedSalary){
         System.out.println("Employee" + employee.getName() + "promoted to Manager");
-        System.out.println("Salary hiked to " + employee.getSalary() * 1.5);
-        employee.setSalary(employee.getSalary() * 1.5);
+        employee.setSalary(hikedSalary);
+        System.out.println("Salary hiked to " + hikedSalary);
     }
 
     public static void main(String[] args) {
@@ -14,19 +14,10 @@ public class Main {
         Department d2 = new Department("Finance", 2);
         Department d3 = new Department("HR", 3);
         System.out.println("Welcome to the Employee Management System");
-        System.out.println("Employee ID: " + emp1.getEmpId());
-        System.out.println("Employee Name: " + emp1.getName());
-        System.out.println("Department: " + emp1.getDepartment());
-        System.out.println("Salary: " + emp1.getSalary());
-        System.out.println("Hire Date: " + emp1.getHireDate());
+        System.out.println("Employee Details: \n" + emp1.toString());
         System.out.println();
-        System.out.println("Manager ID: " + m1.getEmpId());
-        System.out.println("Manager Name: " + m1.getName());
-        System.out.println("Department: " + m1.getDepartment());
-        System.out.println("Salary: " + m1.getSalary());
-        System.out.println("Hire Date: " + m1.getHireDate());
-        System.out.println("Team Size: " + m1.getTeamSize());
+        System.out.println("Manager Details: \n" + m1.toString());
         System.out.println();
-        System.out.println("Total Employees: " + d1.totalEmployees + d2.totalEmployees + d3.totalEmployees);
+        System.out.println("Total Employees: " + Department.getTotalEmployees());
     }
 }

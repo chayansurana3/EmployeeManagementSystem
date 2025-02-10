@@ -4,8 +4,8 @@ public class Employee {
     private int empId;
     protected String name;
     private String department;
-    private double Salary;
-    private LocalDate hireDate;
+    private double salary;
+    protected LocalDate hireDate;
     private EmployeeType employeeType;
 
     public Employee(){
@@ -16,7 +16,7 @@ public class Employee {
         this.empId = id;
         this.name = name;
         this.department = dept;
-        this.Salary = sal;
+        this.salary = sal;
         this.hireDate = hireDate;
         this.employeeType = EmployeeType.valueOf(employeeType);
     }
@@ -38,7 +38,7 @@ public class Employee {
     }
 
     public double getSalary() {
-        return Salary;
+        return salary;
     }
 
     public LocalDate getHireDate() {
@@ -62,7 +62,7 @@ public class Employee {
     }
 
     public void setSalary(double sal) {
-        this.Salary = sal;
+        this.salary = sal;
     }
 
     public void setHireDate(LocalDate hireDate) {

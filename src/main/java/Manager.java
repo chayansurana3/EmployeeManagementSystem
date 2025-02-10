@@ -28,6 +28,8 @@ public class Manager extends Employee {
 
     @Override
     public String toString() {
-        return super.toString() + "Manager{" + "teamSize=" + teamSize + '}';
+        String employeeDetails = super.toString();
+        String managerDetails = "Manager{" + "teamSize=" + teamSize + '}';
+        return employeeDetails + managerDetails;
     }
 }
