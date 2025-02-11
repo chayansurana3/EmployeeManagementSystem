@@ -6,16 +6,19 @@ public class Manager extends Employee {
     public Manager(int empId, String name, String department, double salary, LocalDate hireDate, int teamSize) {
         super(empId, name, department, salary, hireDate, EmployeeType.FULL_TIME);
         this.teamSize = teamSize;
+        Department.incrementTotalEmployees();
     }
 
     public Manager(int empId, String name, String department, int teamSize) {
         super(empId, name, department);
         this.teamSize = teamSize;
+        Department.incrementTotalEmployees();
     }
 
     public Manager() {
         super();
         this.teamSize = 0;
+        Department.incrementTotalEmployees();
     }
 
     public int getTeamSize() {
