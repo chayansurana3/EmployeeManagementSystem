@@ -19,12 +19,16 @@ public class Department{
         return departmentName;
     }
 
-    public int getDepartmentId() {
+    public static int getDepartmentId() {
         return departmentId;
     }
 
     public static int getTotalEmployees(){
         return totalEmployees;
+    }
+
+    public static void incrementTotalEmployees() {
+        totalEmployees++;
     }
 
     public void setDepartmentName(String departmentName){

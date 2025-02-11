@@ -10,6 +10,7 @@ public class Employee {
 
     public Employee(){
         this(0, "Unknown", "Unknown", 0.0, LocalDate.now(), EmployeeType.FULL_TIME);
+        Department.incrementTotalEmployees();
     }
 
     public Employee(int id, String name, String dept, double sal, LocalDate hireDate, EmployeeType employeeType) {
@@ -19,13 +20,15 @@ public class Employee {
         this.salary = sal;
         this.hireDate = hireDate;
         this.employeeType = employeeType;
+        Department.incrementTotalEmployees();
     }
 
     public Employee(int id, String name, String dept){
         this(id, name, dept, 0.0, LocalDate.now(), EmployeeType.FULL_TIME);
+        Department.incrementTotalEmployees();
     }
 
-    public int getEmpId() {
+    public int getEmployeeId() {
         return employeeId;
     }
 
@@ -74,7 +77,7 @@ public class Employee {
     }
 
     public String toString(){
-        return "Employee ID: " + this.getEmpId() + "\nEmployee Name: " + this.getName() + "\nDepartment: " + this.getDepartment() + "\nSalary: " + this.getSalary() + "\nHire Date: " + this.getHireDate() + "\nEmployee Type: " + this.employeeType;
+        return "Employee ID: " + this.getEmployeeId() + "\nEmployee Name: " + this.getName() + "\nDepartment: " + this.getDepartment() + "\nSalary: " + this.getSalary() + "\nHire Date: " + this.getHireDate() + "\nEmployee Type: " + this.employeeType;
     }
 
 }

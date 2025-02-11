@@ -1,10 +1,10 @@
 import java.time.LocalDate;
 
 public class Main {
-    public static void promoteEmployee(Employee employee, int hikedSalary){
+    public static void promoteEmployee(Employee employee){
         System.out.println("Employee" + employee.getName() + "promoted to Manager");
-        employee.setSalary(hikedSalary);
-        System.out.println("Salary hiked to " + hikedSalary);
+        employee.setSalary(employee.getSalary() * 1.5); // Assuming an increase by 1.5 times to the salary
+        System.out.println("Salary hiked to " + employee.getSalary());
     }
 
     public static void main(String[] args) {
@@ -19,6 +19,6 @@ public class Main {
         System.out.println("Manager Details: \n" + m1.toString());
         System.out.println();
         System.out.println("Total Employees: " + Department.getTotalEmployees());
-        promoteEmployee(emp1, 150000);
+        promoteEmployee(emp1);
     }
 }
