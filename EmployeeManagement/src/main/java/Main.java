@@ -2,17 +2,13 @@ import java.time.LocalDate;
 
 public class Main {
     public static void promoteEmployee(Employee employee){
-        System.out.println("Employee" + employee.getName() + "promoted to Manager");
         employee.setSalary(employee.getSalary() * 1.5); // Assuming an increase by 1.5 times to the salary
-        System.out.println("Salary hiked to " + employee.getSalary());
     }
 
     public static void main(String[] args) {
         Employee emp1 = new Employee(1, "Chayan Surana", "IT", 100000, LocalDate.of(2021, 1, 1), EmployeeType.FULL_TIME);
         Manager m1 = new Manager(2, "John Doe", "HR", 5);
         Department d1 = new Department("IT", 1);
-        Department d2 = new Department("Finance", 2);
-        Department d3 = new Department("HR", 3);
         System.out.println("Welcome to the Employee Management System");
         System.out.println("Employee Details: \n" + emp1.toString());
         System.out.println();

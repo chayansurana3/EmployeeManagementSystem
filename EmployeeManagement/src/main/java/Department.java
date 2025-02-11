@@ -1,4 +1,4 @@
-import static java.time.LocalDate.*;
+import static java.time.LocalDate.now;
 
 public class Department{
     private String departmentName;
