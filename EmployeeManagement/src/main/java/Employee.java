@@ -2,10 +2,10 @@ import java.time.LocalDate;
 
 public class Employee {
     private int employeeId;
-    protected String name;
+    private String name;
     private String department;
     private double salary;
-    protected LocalDate hireDate;
+    private LocalDate hireDate;
     private EmployeeType employeeType;
 
     public Employee(){
